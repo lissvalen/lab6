@@ -46,7 +46,9 @@ function addProjectDetails(e) {
 
 function addProjectThing(e) {
 	console.log(e);
-
+	var idNum = e['id'];
+	var selector = "#project" + idNum + " .details";
+	console.log(selector)
 	/*
 	*
 	var projectHTML = '<a href="#" class="details">' + '<img src="' + e['image'] + '"class="img">' + '<p>' + e['title'] + '</p> </a>';
@@ -55,10 +57,9 @@ function addProjectThing(e) {
 	$(".details").html(e['summary']);
 	*/
 
-	$(".details").html(e['date']);
-	$(".details").html(e['image']);
-	$(".details").html(e['summary']);
-
+	$(selector).html(e['date']);
+	$(selector).html(e['image']);
+	$(selector).html(e['summary']);
 }
 
 /*
